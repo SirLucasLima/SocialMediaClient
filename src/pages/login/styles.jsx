@@ -21,9 +21,13 @@ export const Container = styled.div`
   }
 
   > .card {
+    width: 50%;
     display: flex;
     background-color: white;
     min-height: 60rem;
+    border-radius: 10px;
+    overflow: hidden;
+
 
     .left {
       position: relative;
