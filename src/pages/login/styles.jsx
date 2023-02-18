@@ -17,7 +17,7 @@ export const Container = styled.div`
     border: none;
     font-weight: bold;
     cursor: pointer;
-    top: 75%;
+    top: 87%;
   }
 
   > .card {
