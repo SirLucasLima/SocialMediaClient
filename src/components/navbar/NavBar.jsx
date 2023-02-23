@@ -10,7 +10,7 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 
-import login from "../../assets/login.jpg"
+import Login from "../../assets/login.jpg"
 
 export function NavBar(){
   return(
@@ -32,7 +32,7 @@ export function NavBar(){
         <EmailOutlinedIcon />
         <NotificationsOutlinedIcon />
         <div className="user">
-          <img src={login} alt="" />
+          <img src={Login} alt="" />
           <span>Luiza Lima</span>
         </div>
       </div>

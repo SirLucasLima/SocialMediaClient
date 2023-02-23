@@ -6,7 +6,10 @@ export const Container = styled.div`
   justify-content: space-between;
   padding: 1rem 2rem;
   height: 5rem;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid lightgrey;
+  position: sticky;
+  top: 0;
+  background-color: white;
 
   .left {
     display: flex;

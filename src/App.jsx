@@ -6,12 +6,13 @@ import { Profile } from "./pages/profile/Profile";
 import { NavBar } from "./components/navbar/NavBar";
 import { LeftBar } from "./components/leftbar/LeftBar";
 import { RightBar } from "./components/righbar/RighBar";
-import { Outlet } from "./components/outlet/Outlet";
 
 import {
   createBrowserRouter,
-  Navigate,
   RouterProvider,
+  Route,
+  Outlet,
+  Navigate,
 } from "react-router-dom";
 
 function App() {
@@ -23,7 +24,9 @@ function App() {
         <NavBar />
         <div style={{ display: "flex" }}>
           <LeftBar />
-          <Outlet />
+          <div style={{ flex: 6 }}>
+            <Outlet />
+          </div>
           <RightBar />
         </div>
       </div>
