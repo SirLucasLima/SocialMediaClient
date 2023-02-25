@@ -9,7 +9,11 @@ export const Container = styled.div`
   border-bottom: 1px solid lightgrey;
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: ${({theme}) => theme.bg};
+
+  svg {
+    color: ${({theme}) => theme.textColor};;
+  }
 
   .left {
     display: flex;
@@ -20,14 +24,14 @@ export const Container = styled.div`
       text-decoration: none;
       font-weight: bold;
       font-size: 2rem;
-      color: darkblue;
+      color: ${({theme}) => theme.logo};
     }
 
     > .search {
       display: flex;
       align-items: center;
       gap: 1rem;
-      border: 1px solid lightgray;
+      border: 1px solid ${({theme}) => theme.border};
       border-radius: 5px;
       pad: .5rem;
       
@@ -37,6 +41,7 @@ export const Container = styled.div`
         width: 50rem;
         margin: .1rem;
         background-color: transparent;
+        color: ${({theme}) => theme.textColor};
       }
     }
   }
@@ -57,10 +62,9 @@ export const Container = styled.div`
         height: 3rem;
         border-radius: 50%;
         object-fit: cover;
-
       }
       span {
-
+        color: ${({theme}) => theme.textColor};
       }
     }
   }

@@ -11,3 +11,20 @@ export default createGlobalStyle`
     font-size: 62.5%;
   }
 `
+export const darkTheme = {
+  textColor: 'whitesmoke',
+  bg: '#222',
+  logo: 'white',
+  bgSoft: '#333',
+  textColorSoft: 'lightgray',
+  border: '#444',
+}
+
+export const lightTheme = {
+  textColor: '#000',
+  bg: 'white',
+  logo: 'darkblue',
+  bgSoft: '#f6f3f3',
+  textColorSoft: '#555',
+  border: 'lightgray',
+}

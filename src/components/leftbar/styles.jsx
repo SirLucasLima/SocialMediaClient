@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   flex: 2;
   position: sticky;
-  top: 7rem;
   height: calc(100vh - 7rem);
   overflow: scroll;
+  background-color: ${({theme}) => theme.bg};
+  color: ${({theme}) => theme.textColor};
 
   &::-webkit-scrollbar{
     display: none;
@@ -18,7 +19,7 @@ export const Container = styled.div`
       margin: 2rem 0;
       border: none;
       height: 0.5px;
-      background-color: lightgrey;
+      background-color: ${props => props.theme.border};
     }
 
     > .menu {

@@ -7,6 +7,10 @@ import { NavBar } from "./components/navbar/NavBar";
 import { LeftBar } from "./components/leftbar/LeftBar";
 import { RightBar } from "./components/righbar/RighBar";
 
+import { darkTheme, lightTheme } from './styles/global'
+import { ThemeProvider } from 'styled-components'
+import { useState } from 'react';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -19,17 +23,25 @@ function App() {
   const currentUser = true
 
   const Layout = () => {
+    const theme = "dark"
+    /* const [theme, setTheme] = useState("dark")
+    const themeToggler = () => {
+      theme === "light" ? setTheme("dark") : setTheme("light")
+    } */
+
     return(
-      <div>
-        <NavBar />
-        <div style={{ display: "flex" }}>
-          <LeftBar />
-          <div style={{ flex: 6 }}>
-            <Outlet />
+      <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme }>
+        <div >
+          <NavBar />
+          <div style={{ display: "flex" }}>
+            <LeftBar />
+            <div style={{ flex: 6 }}>
+              <Outlet />
+            </div>
+            <RightBar />
           </div>
-          <RightBar />
         </div>
-      </div>
+      </ThemeProvider>
     )
   }
 
