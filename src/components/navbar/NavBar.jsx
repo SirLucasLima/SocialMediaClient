@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
 import { Container } from "./styles"
+import { Link } from "react-router-dom"
 
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
