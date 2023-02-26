@@ -12,7 +12,12 @@ import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 
 import Login from "../../assets/login.jpg"
 
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/DarkModeContext";
+
 export function NavBar(){
+  const {toggle, darkMode} = useContext(DarkModeContext)
+
   return(
     <Container>
       <div className="left">
@@ -20,7 +25,7 @@ export function NavBar(){
          <span>AntiSocial</span>
         </Link>
         <HomeOutlinedIcon />
-        <DarkModeOutlinedIcon />
+        {darkMode ? <WbSunnyOutlinedIcon onClick={toggle}/> : <DarkModeOutlinedIcon onClick={toggle}/>}
         <GridViewOutlinedIcon />
         <div className="search">
           <SearchOutlinedIcon />
