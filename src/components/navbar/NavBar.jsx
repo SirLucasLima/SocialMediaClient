@@ -14,6 +14,7 @@ import Login from "../../assets/login.jpg"
 
 import { useContext } from "react";
 import { DarkModeContext } from "../../context/DarkModeContext";
+import { AuthContext } from "../../context/AuthContext";
 
 export function NavBar(){
   const {toggle, darkMode} = useContext(DarkModeContext)
