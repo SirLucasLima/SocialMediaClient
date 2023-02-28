@@ -6,7 +6,7 @@ export const Container = styled.div`
   top: 7rem;
   height: calc(100vh - 7rem);
   overflow: scroll;
-  background-color: ${({theme}) => theme.bg};
+  background-color: ${({theme}) => theme.bgSoft};
   color: ${({theme}) => theme.textColor};
 
   &::-webkit-scrollbar{
@@ -15,15 +15,17 @@ export const Container = styled.div`
   
   .leftBar{
     padding: 2rem;
-
+    
     > hr {
       margin: 2rem 0;
       border: none;
       height: 0.5px;
       background-color: ${props => props.theme.border};
     }
-
+    
     > .menu {
+      background-color: ${({theme}) => theme.bg};
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       gap: 2rem;

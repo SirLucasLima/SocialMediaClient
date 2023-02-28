@@ -12,7 +12,7 @@ export const Container = styled.div`
   background-color: ${({theme}) => theme.bg};
 
   svg {
-    color: ${({theme}) => theme.textColor};;
+    color: ${({theme}) => theme.textColor};
   }
 
   .left {
