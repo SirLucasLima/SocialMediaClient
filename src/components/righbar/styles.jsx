@@ -6,6 +6,7 @@ export const Container = styled.div`
   top: 7rem;
   height: calc(100vh - 7rem);
   overflow: scroll;
+  background-color: ${({theme}) => theme.bgSoft};
 
   &::-webkit-scrollbar{
     display: none;
@@ -20,6 +21,8 @@ export const Container = styled.div`
       box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
       padding: 2rem;
       margin-bottom: 2rem;
+      background-color: ${({theme}) => theme.bg};
+
       
       span {
         color: gray;
@@ -55,12 +58,13 @@ export const Container = styled.div`
           }
           
           p {
-            color: gray;
+            color: ${({theme}) => theme.textColor};
           }
-
+          
           span {
             font-weight: 500;
             color: black;
+            color: ${({theme}) => theme.textColorSoft};
           }
         }
         

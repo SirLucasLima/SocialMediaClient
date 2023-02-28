@@ -5,8 +5,8 @@ export const Container = styled.div`
     -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
     box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
     border-radius: 20px;
-    background-color: themed("bg");
-    color: themed("textColor");
+    background-color: ${({theme}) => theme.bg};
+    color: ${({theme}) => theme.textColor};
     margin-bottom: 20px;
 
     .share {
@@ -28,15 +28,15 @@ export const Container = styled.div`
           padding: 20px 10px;
           background-color: transparent;
           width: 60%;
-          color: themed("textColor");
+          color: ${({theme}) => theme.textColor};
         }
       }
-
+      
       hr {
         margin: 20px 0px;
         border: none;
         height: 0.5px;
-        background-color: themed("border");
+        background-color: ${({theme}) => theme.border};
       }
 
       .bottom {
