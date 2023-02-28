@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import { Container } from "./styles"
 
 import Friends from "../../assets/1.png";
@@ -14,7 +13,6 @@ import Messages from "../../assets/10.png";
 import Tutorials from "../../assets/11.png";
 import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
-import Login from "../../assets/login.jpg"
 
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
