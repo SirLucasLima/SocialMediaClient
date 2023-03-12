@@ -5,7 +5,7 @@ import Profile from "../pages/profile/Profile"
 import SignIn from "../pages/signIn/SignIn" 
 import SignUp from "../pages/signUp/SignUp"
 
-export default function AppRoutes() {
+export function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />}/>

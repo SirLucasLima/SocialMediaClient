@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Container } from "./stytles"
 
 export default function SignIn(){
@@ -6,7 +7,9 @@ export default function SignIn(){
       <div className="card">
         <div className="left">
           <h1>FraLi Social</h1>
-          <button>Don't you have an account?</button>
+          <Link to={"/register"}>
+            <button>Don't you have an account?</button>
+          </Link>
         </div>
         <div className="right">
           <h1>Sign In</h1>

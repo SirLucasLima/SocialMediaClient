@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import GlobalStyles from './styles/global'
+
+import GlobalStyles, { darkTheme } from './styles/global'
 import { ThemeProvider } from 'styled-components'
 
 import { Routes } from './routes'
