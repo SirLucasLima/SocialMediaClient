@@ -8,7 +8,7 @@ export default function SignIn(){
         <div className="left">
           <h1>FraLi Social</h1>
           <Link to={"/register"}>
-            <button>Don't you have an account?</button>
+            Don't you have an account?
           </Link>
         </div>
         <div className="right">

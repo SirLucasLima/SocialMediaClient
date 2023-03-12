@@ -9,7 +9,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  button {
+  a, button {
     position: absolute;
     min-width: 70%;
     top: 83%;
@@ -62,7 +62,7 @@ export const Container = styled.div`
           }            
         }
         
-        button {
+        a, button {
           background-color: ${({theme}) => theme.blue};
           color: ${({theme}) => theme.bgSoft};
         }
@@ -91,7 +91,7 @@ export const Container = styled.div`
         text-shadow: 2px 2px ${({theme}) => theme.bgSoft};
       }
 
-      button {
+      a, button {
         background-color: ${({theme}) => theme.bgSoft};
         color: ${({theme}) => theme.blue};
       }
