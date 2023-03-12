@@ -1,21 +1,15 @@
 import { Container } from "./stytles"
 
-export default function Login(){
+export default function SignIn(){
   return(
     <Container>
       <div className="card">
         <div className="left">
-          <h1>Hello World.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
-            alias totam numquam ipsa exercitationem dignissimos, error nam,
-            consequatur.
-          </p>
-          <span>Don't you have an account?</span>
-          <button>Register</button>
+          <h1>FraLi Social</h1>
+          <button>Don't you have an account?</button>
         </div>
         <div className="right">
-          <h1>Login</h1>
+          <h1>Sign In</h1>
           <form>
             <input type="text" placeholder="Username" />
             <input type="password" placeholder="Password" />

@@ -1,4 +1,4 @@
-import Login from "./pages/login/Login"
+import SignUp from "./pages/SignUp/SignUp"
 
 import { darkTheme, lightTheme } from './styles/global'
 import { ThemeProvider } from 'styled-components'
@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components'
 export default function App() {
   return(
     <ThemeProvider theme={ darkTheme }>
-      <Login />
+      <SignUp />
     </ThemeProvider>
   )
 }
