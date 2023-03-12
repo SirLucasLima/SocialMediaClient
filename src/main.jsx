@@ -2,11 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import GlobalStyles from './styles/global'
-import App from './App'
+import { ThemeProvider } from 'styled-components'
+
+import { Routes } from './routes'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <GlobalStyles />
-    <App />
+    <ThemeProvider theme={ darkTheme }>
+      <GlobalStyles />
+      <Routes />
+    </ThemeProvider>
   </React.StrictMode>,
 )
