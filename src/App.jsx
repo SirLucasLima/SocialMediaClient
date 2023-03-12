@@ -1,91 +1,34 @@
-import { Login } from "./pages/login/Login";
-import { Register } from "./pages/register/Register";
-import { Home } from "./pages/home/Home";
-import { Profile } from "./pages/profile/Profile";
-
-import { NavBar } from "./components/navbar/NavBar";
-import { LeftBar } from "./components/leftbar/LeftBar";
-import { RightBar } from "./components/righbar/RighBar";
-
-import { darkTheme, lightTheme } from './styles/global'
-import { ThemeProvider } from 'styled-components'
-import { useState } from 'react';
-
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Outlet,
-  Navigate,
-} from "react-router-dom";
-import { useContext } from "react";
-import { DarkModeContext } from "./context/DarkModeContext";
-import { AuthContext } from "./context/AuthContext";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import './App.css'
 
 function App() {
-  const {currentUser} = useContext(AuthContext)
-
-  const {darkMode} = useContext(DarkModeContext)
-  console.log(darkMode)
-
-  const Layout = () => {
-    return(
-      <ThemeProvider theme={ darkMode ? darkTheme : lightTheme }>
-        <div >
-          <NavBar />
-          <div style={{ display: "flex" }}>
-            <LeftBar />
-            <div style={{ flex: 6 }}>
-              <Outlet />
-            </div>
-            <RightBar />
-          </div>
-        </div>
-      </ThemeProvider>
-    )
-  }
-
-  const ProtectedRoute = ({children}) => {
-    if(!currentUser){
-      return <Navigate to="/login"/>
-    }
-    return children
-  }
-
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: (
-        <ProtectedRoute>
-          <Layout />
-        </ProtectedRoute>
-      ),
-      children:[
-        {
-          path:"/",
-          element:<Home />
-        },
-        {
-          path:"/profile/:id",
-          element:<Profile />
-        }
-      ]
-    },
-    {
-      path: "/login",
-      element: <Login />,
-    },
-    {
-      path: "/register",
-      element: <Register />,
-    },
-  ]);
+  const [count, setCount] = useState(0)
 
   return (
-    <div>
-      <RouterProvider router={router} />
+    <div className="App">
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src="/vite.svg" className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://reactjs.org" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
