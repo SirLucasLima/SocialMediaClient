@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   flex: 3;
   position: sticky;
-  top: 7rem;
-  height: calc(100vh - 7rem);
+  top: 6.4rem;
+  height: calc(100vh - 6.4rem);
   overflow: scroll;
   background-color: ${({theme}) => theme.bgSoft};
 
@@ -13,14 +13,15 @@ export const Container = styled.div`
   }
 
   .rightBar {
-    padding: 2rem;
+    padding: 0 1.6rem;
     
     > .item {
       -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
       -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
       box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
-      padding: 2rem;
-      margin-bottom: 2rem;
+      padding: 2.4rem;
+      margin-bottom: 2.4rem;
+      border-radius: 8px;
       background-color: ${({theme}) => theme.bg};
 
       

@@ -10,11 +10,10 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 
-import Login from "../../assets/login.jpg"
+import Profile from "../../assets/profile.jpg"
 
 import { useContext } from "react";
 import { DarkModeContext } from "../../context/DarkModeContext";
-import { AuthContext } from "../../context/AuthContext";
 
 export function NavBar(){
   const {toggle, darkMode} = useContext(DarkModeContext)
@@ -23,7 +22,7 @@ export function NavBar(){
     <Container>
       <div className="left">
         <Link to="/">
-         <span>AntiSocial</span>
+         FraLi Social
         </Link>
         <HomeOutlinedIcon />
         {darkMode ? <WbSunnyOutlinedIcon onClick={toggle}/> : <DarkModeOutlinedIcon onClick={toggle}/>}
@@ -38,8 +37,8 @@ export function NavBar(){
         <EmailOutlinedIcon />
         <NotificationsOutlinedIcon />
         <div className="user">
-          <img src={Login} alt="" />
-          <span>Luiza Lima</span>
+          <img src={Profile} alt="" />
+          <span>Jhon Doe</span>
         </div>
       </div>
     </Container>

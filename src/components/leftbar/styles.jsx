@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   flex: 2;
   position: sticky;
-  top: 7rem;
-  height: calc(100vh - 7rem);
+  top: 6.4rem;
+  height: calc(100vh - 6.4rem);
   overflow: scroll;
   background-color: ${({theme}) => theme.bgSoft};
   color: ${({theme}) => theme.textColor};
@@ -14,7 +14,7 @@ export const Container = styled.div`
   }
   
   .leftBar{
-    padding: 2rem;
+    padding: 0 1.6rem;
     
     > hr {
       margin: 2rem 0;

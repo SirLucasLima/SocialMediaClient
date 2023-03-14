@@ -1,10 +1,8 @@
 import { Container } from "./styles"
 
-import { useContext } from "react";
-import { AuthContext } from "../../context/AuthContext";
+import Profile from "../../assets/profile.jpg"
 
 export function Comments(){
-  const { currentUser } = useContext(AuthContext);
   
   //Temporary
   const comments = [
@@ -29,7 +27,7 @@ export function Comments(){
   return(
     <Container>
       <div className="write">
-        <img src={currentUser.profilePic} alt="" />
+        <img src={Profile} alt="" />
         <input type="text" placeholder="write a comment" />
         <button>Send</button>
       </div>
