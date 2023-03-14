@@ -47,7 +47,7 @@ export function LeftBar(){
             <span>Memories</span>
           </div>
         </div>
-        <hr />
+        <div lassName="line"/>
         <div className="menu">
           <span>Your shortcuts</span>
           <div className="item">
@@ -71,7 +71,7 @@ export function LeftBar(){
             <span>Messages</span>
           </div>
         </div>
-        <hr />
+        <div lassName="line"/>
         <div className="menu">
           <span>Others</span>
           <div className="item">

@@ -16,19 +16,19 @@ export const Container = styled.div`
   .leftBar{
     padding: 0 1.6rem;
     
-    > hr {
-      margin: 2rem 0;
-      border: none;
-      height: 0.5px;
-      background-color: ${props => props.theme.border};
+    > .line {
+      height: 2.4rem;
+      margin-bottom: 1px solid ${props => props.theme.border};
     }
     
     > .menu {
       background-color: ${({theme}) => theme.bg};
       padding: 2rem;
+      margin-bottom: 2.4rem;
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      border-radius: 8px;
 
       .user {
         display: flex;
@@ -62,7 +62,6 @@ export const Container = styled.div`
         }
       }
     }
-
   }
 
 `
