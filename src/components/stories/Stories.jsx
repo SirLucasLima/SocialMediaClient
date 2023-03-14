@@ -1,10 +1,8 @@
 import { Container } from "./styles"
 
-import { useContext } from "react";
-import { AuthContext } from "../../context/AuthContext";
+import Profile from "../../assets/profile.jpg"
 
 export function Stories(){
-  const {currentUser} = useContext(AuthContext)
 
   //TEMPORARY
   const stories = [
@@ -33,8 +31,8 @@ export function Stories(){
   return (
     <Container>
       <div className="story">
-          <img src={currentUser.profilePic} alt="" />
-          <span>{currentUser.name}</span>
+          <img src={Profile} alt="" />
+          <span>Jhon Doe</span>
           <button>+</button>
         </div>
       {stories.map(story=>(

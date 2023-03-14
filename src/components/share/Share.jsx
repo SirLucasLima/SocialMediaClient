@@ -3,21 +3,18 @@ import { Container } from "./styles"
 import Image from "../../assets/img.png";
 import Map from "../../assets/map.png";
 import Friend from "../../assets/friend.png";
-import { useContext } from "react";
-import { AuthContext } from "../../context/AuthContext";
+import Profile from "../../assets/profile.jpg"
 
 export function Share(){
-  const {currentUser} = useContext(AuthContext)
-
   return (
     <Container>
       <div className="share">
         <div className="top">
           <img
-            src={currentUser.profilePic}
+            src={Profile}
             alt=""
           />
-          <input type="text" placeholder={`What's on your mind ${currentUser.name}?`} />
+          <input type="text" placeholder={`What's on your mind ${"Jhon Doe"}?`} />
         </div>
         <hr />
         <div className="bottom">
